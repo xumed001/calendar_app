@@ -1,0 +1,96 @@
+html {
+    font-family: sans-serif;
+    font-size: 16px;
+    background-color: whitesmoke;
+}
+
+.calendar {
+    
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-align: center;
+
+    margin-bottom: 1rem;
+    background: rgba(0,0,0,1);
+    color: #fff;
+    min-height: 10vh;
+    border-radius: 1rem;
+}
+
+ul, ol {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 1rem;
+    margin: 0 auto;
+    max-width: 64rem;
+    padding: 0;
+}
+
+ul.days {
+    /* margin-bottom: 1rem; */
+}
+
+hr {
+    border-width: .5px;
+    color: rgba(0,0,0,.2);
+}
+
+ul.days li {
+    height: 2vw;
+}
+
+ul.days abbr[title] {
+    border: none;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+    font-size: .5rem;
+    /*   color: rgba(255,35,35, .8); */
+}
+
+ol.days-grid li {
+    background-color: #eaeaea;
+    border: 1px solid #eaeaea;
+    height: 12vw;
+    max-height: 125px;
+    border-radius: 1em;
+}
+
+ol.days-grid li:nth-child(1),
+ol.days-grid li:nth-child(33),
+ol.days-grid li:nth-child(34),
+ol.days-grid li:nth-child(35){
+    background-color: whitesmoke;
+}
+
+@media all and (max-width: 800px) {
+.header {
+    color: whitesmoke;
+}
+
+ul, ol {
+    grid-gap: 1rem;
+}
+
+ul.days li {
+    font-size: 0;
+}
+
+ul.days > li abbr:after {
+    content: attr(title);
+    font-size: 1rem;
+}
+
+}

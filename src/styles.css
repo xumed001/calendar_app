@@ -56,7 +56,7 @@ li {
     align-items: center;
     justify-content: center;
     margin-left: 0;
-    font-size: .5rem;
+    font-size: 1rem;
     /*   color: rgba(255,35,35, .8); */
 }
 
@@ -75,7 +75,7 @@ ol.days-grid li:nth-child(35){
     background-color: whitesmoke;
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 600px) {
 .header {
     color: whitesmoke;
 }
@@ -91,6 +91,10 @@ ul.days li {
 ul.days > li abbr:after {
     content: attr(title);
     font-size: 1rem;
+}
+
+li  {
+    font-size: .5rem;
 }
 
 }
